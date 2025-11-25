@@ -18,7 +18,7 @@ while True:
             print(f"\tComputers First Card: {comps_hand[0]}")
             if sum_uh == 21:
                 print("\n🎊BLACK JACK, You Win!!!!!🎊")
-                return "EXIT"  # ✅ Replace `break` with `return`
+                return "EXIT"  
             move = input("Press 'H' to hit or 'S' to stand: ").upper()
             return move
 
@@ -27,11 +27,11 @@ while True:
             print(f"\tComputer's final hand: {comps_hand}, final score: {sum_ch}")
 
         def final_display():
-            global sum_ch # ✅ Ensure sum_ch updates globally
+            global sum_ch 
 
             while sum_ch <= 17:
                 comps_hand.append(random.choice(cards))
-                sum_ch = sum(comps_hand) # ✅ Update sum dynamically after each hit
+                sum_ch = sum(comps_hand) 
             print(f"\n\tYour final hand: {users_hand}, final score: {sum_uh}")
             print(f"\tComputer's final hand: {comps_hand}, final score: {sum_ch}")
             if sum_ch > 21:
